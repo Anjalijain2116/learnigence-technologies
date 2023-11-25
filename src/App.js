@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Leftnav from "./components/Left-nav"
+import Topnav from "./components/Top-nav"
+import Midnav from "./components/Mid-nav"
+import Imgnav from "./components/Img-nav"
+import Videobody from './components/Video-body';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+         <Leftnav />
+      </div>
+
+      <div className="ele2">
+        <Topnav />
+        <Midnav />
+        <div className="the_body">
+          <div><Imgnav/></div>
+          <div><Videobody /></div>
+        </div>
+      </div>
+      
     </div>
   );
 }
